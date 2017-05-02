@@ -1,0 +1,12 @@
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/andreassimon/bootstrap-infrastructure.git # timeout=10
+Fetching upstream changes from https://github.com/andreassimon/bootstrap-infrastructure.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/andreassimon/bootstrap-infrastructure.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 314f7e7202742699bfe24aff4412ce6dcbd5e921 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 314f7e7202742699bfe24aff4412ce6dcbd5e921
+ > git rev-list 2a284e8d369107c6dd5b033af701dadb44c4435b # timeout=10
